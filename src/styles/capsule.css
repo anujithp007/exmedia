@@ -1,0 +1,46 @@
+.capsuleSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  column-gap: 2rem;
+  overflow: hidden;
+}
+.capsule {
+  height: 15rem;
+  width: 5rem;
+  border-radius: 5rem;
+  background-color: aqua;
+}
+
+@media screen and (max-width: 479px) {
+  .capsuleSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+  }
+  .capsule:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000;
+}
+
+.whatsapp-icon__icon {
+  font-size: 5rem; /* Adjust icon size as needed */
+  color: #25d366; /* WhatsApp brand color */
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for better visibility */
+  transition: transform 0.3s ease; /* Optional: Add smooth transition effect */
+}
+
+.whatsapp-icon__icon:hover {
+  transform: scale(1.1); /* Optional: Add slight scale effect on hover */
+}

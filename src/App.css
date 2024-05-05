@@ -1,0 +1,31 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@600&family=Roboto:wght@500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-color: #687183;
+    --background-color: #ecf0f1;
+
+    /*heading font-size */
+    --section-heading1:3.25em;
+    --section-heading2:2.5em;
+    --section-heading3:2em;
+
+    /* paragraph font-size */
+    --section-para1:1.4em;
+    --section-para2:1.2em;
+
+  }
+
+body{
+    padding-inline:20px ;
+    background-color: #fafcff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0!important;
+}
+
+html {
+  scroll-behavior: smooth;
+}

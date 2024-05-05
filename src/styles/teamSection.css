@@ -1,0 +1,141 @@
+.teamSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-start:50px;
+}
+.team{
+    max-width: 62rem;
+    width: 100%;
+}
+.teamContent{
+    margin-inline-start: 2%;
+    margin-block-end: 100px;
+    width: 56rem;
+
+}
+.teamContent h2{
+    font-size:var(--section-heading1);
+    color: var(--font-color);
+}
+.teamContent p{
+    font-size:var(--section-para1);
+    width: 46rem;
+    color: var(--font-color);
+}
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   column-gap: 7%;
+   margin-block-end: 50px;
+   transition: opacity 0.5s ease; 
+
+}
+.profilePic{
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profilePic img{
+    width: 40%;
+    height: 40%;
+    filter: grayscale(100%);
+    border-radius: 50%;
+    transition: transform 0.3s ease, filter 1s ease;
+
+}
+.profileName{
+    width: 50%;
+    grid-column-gap: 0.25rem;
+    grid-row-gap: 0.25rem;
+    flex-direction: column;
+    display: flex;
+}
+.profileName h3{
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-block-end: 0.3em;
+    
+}
+.profilePosition{
+    opacity: 0.4;
+}
+.profileDetails{
+    width: 100%;
+}
+.profileDetails p{
+    opacity: 0.4;
+    font-size: 1.2em;
+}
+@media (hover:hover){
+
+.profile:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+}
+.profile:hover ~ .profile  {
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+.profile:hover .profilePic img{
+    transform: scale(2.5); /* Increase the scale factor for zoom effect */
+    filter: grayscale(0%);
+    transition: transform 0.5s ease, filter 1s ease;
+}
+.profile:hover .profileDetails p{
+    opacity: 1;
+}
+    
+}
+
+@media screen and (max-width:991px) {
+    .teamContent{
+    margin-inline-start: 1%;
+    width: 100%;
+}
+.teamContent h2{
+    font-size: var(--section-heading2);
+    width: 100%;
+
+}
+.teamContent p{
+    width: 100%;
+
+}
+}
+
+@media screen and (max-width:768px) {
+    .teamSection{
+        margin-block-start: 0px;
+    }
+    .teamContent h2{
+        font-size: var(--section-heading3);    
+    }
+
+    .profile{
+        flex-wrap: wrap; 
+    }
+    .profileDetails p{
+        opacity:1;
+    }
+    .profilePic img{
+        transform: scale(3); /* Increase the scale factor for zoom effect */
+        filter: grayscale(0%);
+        transition: transform 0.5s ease, filter 1s ease;
+    }
+}
+@media screen and (max-width:479px) {
+    .teamContent p {
+        font-size: var(--section-para2);
+    }
+    .profileDetails p {
+        font-size: 1.2em;
+    }    
+}
+

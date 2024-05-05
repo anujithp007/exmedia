@@ -1,0 +1,192 @@
+.projectSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 100px;
+}
+.project{
+    max-width: 62rem;
+    width: 100%;
+}
+.projectContent{
+    margin-inline-start: 2%;
+    margin-block-end: 100px;
+    width: 56rem;
+
+}
+.projectContent h2{
+    font-size:var(--section-heading1);
+    color: var(--font-color);
+}
+.projectContent p{
+    font-size:var(--section-para1);
+    width: 45rem;
+    color: var(--font-color);
+}
+.project-box{
+    display: flex;
+    justify-content: flex-start;
+    grid-column-gap: 10%;
+    margin-block-end: 100px;
+}
+.rev{
+    flex-direction: row-reverse;
+}
+
+.project-vid{
+    width: 45%;
+    height: 28rem;
+    background-color: white;
+    /* border: 1px solid lightgray; */
+
+    border: 1px solid rgb(249, 246, 246);
+    border-radius: 10%;
+}
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing img {
+    border: 5px solid #f8f8f8;
+    display: block;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+/* nail */
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+.project-vid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.project-details{
+    width: 35%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3rem;
+    display: flex;
+}
+.project-title{
+    font-size: 2em;
+    font-weight:600;
+}
+.project-description{
+    margin-block-start: auto;
+    margin-bottom: 1.5rem;
+    font-weight: 100;
+}
+.project-link{
+    text-decoration: none;
+    padding-inline:30px;
+    padding-block:10px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+    color: blue;
+}
+.project-link:hover{
+    background-color: blue;
+    color: white;
+}
+
+@media screen and (max-width:991px) {
+    .projectContent{
+    margin-inline-start: 1%;
+    width: 100%;
+}
+.projectContent h2{
+    font-size:var(--section-heading2);
+    width: 100%;
+
+}
+.projectContent p{
+    width: 100%;
+}
+
+.project-title{
+    font-size: 1.8em;
+}
+.project-description{
+    font-size: 1em;
+
+}
+}
+@media screen and (max-width:768px){
+    .projectSection{
+        margin-block-start:0px;
+    }
+
+    .projectContent h2{
+        font-size:var(--section-heading3);    
+    }
+
+    .project-title{
+        font-size: 1.4em;
+    }
+    .project-description{
+        font-size: 1.2em; 
+    }
+    .project-details{
+        padding: 2rem 0 2rem 1rem;
+    }
+    .project-vid{
+        height: 20rem;
+    }
+    .project-details{
+        width: 40%;
+    }
+}
+@media screen and (max-width:500px){
+    .project-box{
+        flex-direction: column;
+        row-gap: 30px;
+        margin-block-end: 70px;
+
+    }
+    .projectContent p{
+        font-size: var(--section-para2);
+    }
+    .project-vid{
+        width: 100%;
+    }
+    .project-details{
+        width: 98%;
+        height: 10rem;
+        border: none;
+    }
+    .project-description{
+        margin-block-start: 20px;
+        margin-bottom: 1.5rem;
+        font-size:1.3em;
+    }
+}
