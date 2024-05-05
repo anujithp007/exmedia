@@ -24,6 +24,9 @@
     width: 46rem;
     color: var(--font-color);
 }
+.profileDetails ul li{
+    font-size: 3vh;
+}
 .profile{
     display: flex;
     justify-content: flex-start;
@@ -92,6 +95,12 @@
     opacity: 1;
 }
     
+}
+@media screen and (max-width:480px) {
+    .profileDetails ul{
+        padding-top: 20px;
+        padding-inline-start: 15px;
+    }
 }
 
 @media screen and (max-width:991px) {
